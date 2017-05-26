@@ -1,4 +1,5 @@
-var ieee754 = require('../')
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var ieee754 = require('ieee754/')
 var test = require('tape')
 
 var EPSILON = 0.00001
@@ -21,3 +22,5 @@ test('write float', function (t) {
 
   t.end()
 })
+
+return module.exports;});
