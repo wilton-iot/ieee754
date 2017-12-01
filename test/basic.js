@@ -1,5 +1,5 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
-var ieee754 = require('ieee754/')
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var ieee754 = require('ieee754')
 var test = require('tape-compat')
 
 var EPSILON = 0.00001
@@ -23,4 +23,4 @@ test('write float', function (t) {
   t.end()
 })
 
-return module.exports;});
+require = requireOrig;});
